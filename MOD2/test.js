@@ -1,1 +1,1 @@
-console.log('this is firts test')
+console.log('this is my first log')

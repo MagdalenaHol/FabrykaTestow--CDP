@@ -2,7 +2,6 @@
   beforeEach(() => {
     cy.visit('https://fabrykatestow.pl/')
   })
-
   it('id', () => {
     cy.get('#wp-emoji-styles-inline-css')
     cy.get('#classic-theme-styles-inline-css')

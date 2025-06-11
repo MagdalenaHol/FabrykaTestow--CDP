@@ -27,11 +27,11 @@ describe('API test MOD6', ()=>{
             method: 'DELETE',
             url: url,
             headers: {'Content-type': 'application/json'}     
-        }).then((respone)=>{
-            expect(respone.status).to.eq(200)
-            expect(respone.body.title).not.to.exist
-            expect(respone.body).to.be.empty
-            const body = JSON.stringify(respone.body)
+        }).then((response)=>{
+            expect(response.status).to.eq(200)
+            expect(response.body.title).not.to.exist
+            expect(response.body).to.be.empty
+            const body = JSON.stringify(response.body)
             cy.log(body)
         })
     })

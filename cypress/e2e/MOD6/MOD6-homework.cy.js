@@ -17,6 +17,7 @@ describe('API test MOD6', ()=>{
             }),
             headers: {'Content-type' : 'application/json'}
         }).then((response) =>{
+            expect(response.status).to.eq(200)
             expect(response.body.title).to.eq('New title')
             expect(response.body.userId).to.eq(1)
             const body = JSON.stringify(response.body)
@@ -27,6 +28,7 @@ describe('API test MOD6', ()=>{
             url: url,
             headers: {'Content-type': 'application/json'}     
         }).then((respone)=>{
+            expect(respone.status).to.eq(200)
             expect(respone.body.title).not.to.exist
             expect(respone.body).to.be.empty
             const body = JSON.stringify(respone.body)

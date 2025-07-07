@@ -1,3 +1,9 @@
 node_modules
 cypress/videos
 cypress/screenshots
+cypress/e2e/1-getting-started
+cypress/e2e/2-advanced-examples
+cypress/e2e/MOD4
+cypress/e2e/MOD5
+cypress/e2e/MOD6
+MOD2

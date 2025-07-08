@@ -1,11 +1,7 @@
-// const figure = '.figure'
 const figcaption = '.figcaption'
 
 class HoversPage {
     hoverOverElement(){
-        // cy.get(figure).first().trigger('mouseover')
-        // cy.get(figure).eq(1).trigger('mouseover')
-
         cy.get(figcaption).first().should('be.hidden').invoke('show').should('be.visible')
     }
 }

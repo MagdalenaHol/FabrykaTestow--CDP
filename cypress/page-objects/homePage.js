@@ -18,16 +18,16 @@ class HomePage {
         const url = new Urls()
         url.visitHomePage()
     }
-    clickCheckBoxTab(){
+    clickCheckBoxHeader(){
         cy.get(checkBoxHeader).click()
     }
     clickDatePickerHeader(){
         cy.get(datePickerHeader).click()
     }
-    clickHoversTab(){
+    clickHoversHeader(){
         cy.get(hoversHeader).click()
     }
-    clickInputsTab(){
+    clickInputsHeader(){
         cy.get(inputHeader).click()
     }
     clickBasicAuthHeader(){
@@ -36,7 +36,7 @@ class HomePage {
     clickFormHeader(){
         cy.get(formHeader).click()
     }
-    clickDopdownListTab(){
+    clickDopdownListHeader(){
         cy.get(dropDownListHeader).click()
     }
     clickKeyPressesHeader(){

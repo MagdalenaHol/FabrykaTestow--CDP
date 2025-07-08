@@ -24,7 +24,7 @@ describe('testing different control types', () =>{
 
     })
     it('test checkbox', ()=>{
-        homePage.clickCheckBoxTab()
+        homePage.clickCheckBoxHeader()
 
         const checkboxPage = new CheckboxPage();
         checkboxPage.checkFirstCheckbox()
@@ -37,13 +37,13 @@ describe('testing different control types', () =>{
         datePicker.inputTheDate()
     })
     it('test hover', ()=>{
-        homePage.clickHoversTab()
+        homePage.clickHoversHeader()
 
         const hoversPage = new HoversPage();
         hoversPage.hoverOverElement()
     })
     it('test inputs', ()=>{
-        homePage.clickInputsTab()
+        homePage.clickInputsHeader()
 
         const inputPage = new InputPage();
         inputPage.typeNumberIntoField()
@@ -68,7 +68,7 @@ describe('testing different control types', () =>{
         formPage.clickSubmit()
     })
     it('test dropdown list', ()=>{
-        homePage.clickDopdownListTab()
+        homePage.clickDopdownListHeader()
 
         const dropdownPage = new DropdownListPage();
         dropdownPage.chooseDropdownListFirstOption()         

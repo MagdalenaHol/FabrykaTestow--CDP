@@ -14,48 +14,42 @@ import DatePickerPage from "../../page-objects/datePickerPage"
 
 
 
+
 describe('testing different control types', () =>{
 
+    const homePage = new HomePage();
+
     beforeEach(()=>{
-        cy.visit('/')
-    })
+        cy.visit('/');
 
-    it('test inputs', ()=>{
-        const homePage = new HomePage();
-        homePage.clickInputsTab()
-
-        const inputPage = new InputPage();
-        inputPage.typeNumberIntoField()
-        inputPage.typeLettersIntoField()
-        
     })
     it('test checkbox', ()=>{
-        const homePage = new HomePage();
         homePage.clickCheckBoxTab()
 
         const checkboxPage = new CheckboxPage();
         checkboxPage.checkFirstCheckbox()
         checkboxPage.uncheckSecondCheckbox()
-        
     })
+    it('test date picker', ()=>{
+        homePage.clickDatePickerHeader()
 
-    it('test dropdown list', ()=>{
-        const homePage = new HomePage();
-        homePage.clickDopdownListTab()
-
-        const dropdownPage = new DropdownListPage();
-        dropdownPage.chooseDropdownListFirstOption()
-          
+        const datePicker = new DatePickerPage();
+        datePicker.inputTheDate()
     })
-     it('test hover', ()=>{
-        const homePage = new HomePage();
+    it('test hover', ()=>{
         homePage.clickHoversTab()
 
         const hoversPage = new HoversPage();
         hoversPage.hoverOverElement()
     })
+    it('test inputs', ()=>{
+        homePage.clickInputsTab()
+
+        const inputPage = new InputPage();
+        inputPage.typeNumberIntoField()
+        inputPage.typeLettersIntoField()
+    })
     it('test authorisation', ()=>{
-        const homePage = new HomePage();
         homePage.clickBasicAuthHeader()
 
         const basicAuthPage = new BasicAuthPage();
@@ -65,7 +59,6 @@ describe('testing different control types', () =>{
         basicAuthPage.clicklogintoAuth()
     })
     it('test form', ()=>{
-        const homePage = new HomePage();
         homePage.clickFormHeader()
 
         const formPage = new FormPage();
@@ -74,16 +67,27 @@ describe('testing different control types', () =>{
         formPage.typeLastName()
         formPage.clickSubmit()
     })
+    it('test dropdown list', ()=>{
+        homePage.clickDopdownListTab()
+
+        const dropdownPage = new DropdownListPage();
+        dropdownPage.chooseDropdownListFirstOption()         
+    })  
     it('test key presses form', ()=>{
-        const homePage = new HomePage();
         homePage.clickKeyPressesHeader()
 
         const keyPressesPage = new KeyPressesPage();
         keyPressesPage.showKeyPressesForm()
         keyPressesPage.pressKeyToSeeInput()
     })
+    it('test drag and drop', ()=>{
+        homePage.clickDragAndDropHeader()
+
+        const dragAndDrop = new DragAndDopPage();
+        dragAndDrop.dragColumnA()
+        dragAndDrop.dragColumnB()
+    })
     it('test add and remove elements', ()=>{
-        const homePage = new HomePage();
         homePage.clickAddAndRemoveElementsHeader()
 
         const addElementPage = new AddRemoveElementsPage();
@@ -92,7 +96,6 @@ describe('testing different control types', () =>{
         addElementPage.removeElement()
     })
     it('test status codes', ()=>{
-        const homePage = new HomePage();
         homePage.clickStatusCodesHeader()
 
         const statusCodes = new StatusCodesPage();
@@ -103,30 +106,10 @@ describe('testing different control types', () =>{
         statusCodes.checkStatusCode500()
     })
     it('test iFrame buttons', ()=> {
-        const homePage = new HomePage();
         homePage.clickiFrameHeader()
 
         const iFrame = new iFramePage();
         iFrame.iFrameButton1()
         iFrame.iFrameButton2()
     })
-    it('test drag and drop', ()=>{
-        const homePage = new HomePage();
-        homePage.clickDragAndDropHeader()
-
-        const dragAndDrop = new DragAndDopPage();
-        dragAndDrop.dragColumnA()
-        dragAndDrop.dragColumnB()
-    })
-    it('test date picker', ()=>{
-        const homePage = new HomePage();
-        homePage.clickDatePickerHeader()
-
-        const datePicker = new DatePickerPage();
-        datePicker.inputTheDate()
-
-    })
-    
-
-
 })

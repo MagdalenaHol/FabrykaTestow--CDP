@@ -4,9 +4,5 @@ class DatePickerPage{
     inputTheDate(){
         cy.get(dateInput).click().clear().type('2020-07-20').should('have.value', '2020-07-20')
     }
-    pickTheDate(){
-        
-    }
-
 }
 export default DatePickerPage;

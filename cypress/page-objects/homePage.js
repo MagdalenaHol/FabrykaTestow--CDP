@@ -14,17 +14,21 @@ const dragAndDropHeader = '#draganddrop-header'
 const datePickerHeader = '#datepicker-header'
 
 class HomePage {
-    clickInputsTab(){
-        cy.get(inputHeader).click()
+    visitPage(){
+        const url = new Urls()
+        url.visitHomePage()
     }
     clickCheckBoxTab(){
         cy.get(checkBoxHeader).click()
     }
-    clickDopdownListTab(){
-        cy.get(dropDownListHeader).click()
+    clickDatePickerHeader(){
+        cy.get(datePickerHeader).click()
     }
     clickHoversTab(){
         cy.get(hoversHeader).click()
+    }
+    clickInputsTab(){
+        cy.get(inputHeader).click()
     }
     clickBasicAuthHeader(){
         cy.get(basicAuthHeader).click()
@@ -32,8 +36,14 @@ class HomePage {
     clickFormHeader(){
         cy.get(formHeader).click()
     }
+    clickDopdownListTab(){
+        cy.get(dropDownListHeader).click()
+    }
     clickKeyPressesHeader(){
         cy.get(keyPressesHeader).click()
+    }
+    clickDragAndDropHeader(){
+        cy.get(dragAndDropHeader).click()
     }
     clickAddAndRemoveElementsHeader(){
         cy.get(addAndRemoveElements).click()
@@ -43,16 +53,6 @@ class HomePage {
     }
     clickiFrameHeader(){
         cy.get(iFrameHeader).click()
-    }
-    clickDragAndDropHeader(){
-        cy.get(dragAndDropHeader).click()
-    }
-    clickDatePickerHeader(){
-        cy.get(datePickerHeader).click()
-    }
-    visitPage(){
-        const url = new Urls()
-        url.visitHomePage()
     }
 }
 export default HomePage;
